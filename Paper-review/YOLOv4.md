@@ -4,13 +4,13 @@
 
 ---
 
-  
+
 
 Object detection에 경우 R-CNN이후 활발히 연구가 진행되었다. 실생활에서 실시간성이 필수가 아닌 곳 에서는 종종 사용하지만 실제로 적용되는 사례가 적은데 그 이유가 “실시간”이다. 그래서 YOLO에 저자들은 빠르면서 정확한 detector를 연구해야한다는 것을 강조하고있다. Main contribution은 sota method 방법들을 바탕으로 정확도를 높였고 single GPU만을 사용해도 가능하게 만들었다.  
 
 
 
-### Introduction
+## Introduction
 
 <p align="center"><img width="50%" src="../image/Paper-review/YOLOv4/001.png" /></p>  
 
@@ -18,7 +18,7 @@ Object detection에 경우 R-CNN이후 활발히 연구가 진행되었다. 실�
 
   
 
-### Bag of freebies(전처리, 학습단계)
+## Bag of freebies(전처리, 학습단계)
 
 YOLOv4의 저자들은 Bag of Freebies단계에서 아래와같은 방법들로 실험을 진행했다. 물론 다 좋은 결과를 보여준것은 아니고 실험을 통해서 좋은 결과를 보여주는 방법을 찾아냈다.  
 
@@ -58,7 +58,7 @@ MSE, IoU, Generalized IoU, Complete IoU, Distance IoU
 
   
 
-### Bag of specials(architecture related)
+## Bag of specials(architecture related)
 
 #### Enhancement of receptive filed           
 
@@ -113,7 +113,7 @@ MSE, IoU, Generalized IoU, Complete IoU, Distance IoU
 
   
 
-### YOLOv4
+## YOLOv4
 
 YOLOv4는 위와 같이 정말… 엄청나게 많은 실험을 진행했다. Backbone을 결정할때는 세가지 조건을 고려했는데 첫번째로는 YOLO에 고질적인 문제인 작은 객체에 대해서 취약하다는 점이었는데 다양한 객체를 잘 찾기 위해서 input resolution(512x512)을 크게 가져갔고 receptive filed를 많이 가져가기 위해서 많은 layer층을 쌓았다. 또한 하나의 이미지에서 여러 크기의 객체를 찾기위해서 parameter의 수를 증가시켰다.  
 
@@ -131,7 +131,7 @@ YOLOv4에 전체적인 구조는 CSPDarkNet53(Backbone) + SPP + PAN(Path Aggrega
 
 
 
-### Selection of BoF and BoS
+## Selection of BoF and BoS
 
 실질적으로 YOLOv4에서 사용한것들을 정리해보면 아래와 같다,  
 
@@ -146,7 +146,7 @@ YOLOv4에 전체적인 구조는 CSPDarkNet53(Backbone) + SPP + PAN(Path Aggrega
 
   
 
-### Additional improvements
+## Additional improvements
 
 <p align="center"><img width="50%" src="../image/Paper-review/YOLOv4/003.png" /></p>
 
@@ -158,7 +158,7 @@ YOLOv4에 전체적인 구조는 CSPDarkNet53(Backbone) + SPP + PAN(Path Aggrega
 
   
 
-### Experimental, Conclusion
+## Experimental, Conclusion
 
 아래에 결과를 보면 모든 방법이 좋은 성능은 못보 였지만 특정 방법을 사용했을 때 성능이 올라간 것을 볼 수 가있다. 이 외에도 논문을 보면 많은 실험 결과들을 볼 수 있으니 참고하면 좋을 것 같다. 
 
