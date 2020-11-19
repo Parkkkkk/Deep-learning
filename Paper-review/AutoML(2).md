@@ -8,7 +8,7 @@
 
 
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/005.png" /></p>
+<p align="center"><img width="45%" height="45%" src="../image/Paper-review/AutoML-Zero/005.PNG" /></p>
 
   
 
@@ -20,7 +20,7 @@
 
 
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/006.png" /></p>
+<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/006.PNG" /></p>
 
   
 
@@ -61,7 +61,7 @@
 
 - ##### Few training examples
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/007.png" /></p>
+<p align="center"><img width="30%" height="30%" src="../image/Paper-review/AutoML-Zero/007.png" /></p>
 
 Training dataset = 80, epoch = 100으로 적은량의 데이터셋을 가지고 실험했을때 위에 그림과 같이 AutoML-Zero가 input gaussian noise를 더해서 그것을 ReLU를 취하는 Noisy ReLU를 구현한것을 볼수 있다. 저자들은 Training dataset을 80개와 800개로 재실험을 했을때 80개를 가지고 학습 했을때 더 많은 경우에서 Noisy ReLU가 구현된것을 확인했다.
 
@@ -69,7 +69,7 @@ Training dataset = 80, epoch = 100으로 적은량의 데이터셋을 가지고 
 
 - ##### Fast training
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/008.png" /></p>
+<p align="center"><img width="30%" height="30%" src="../image/Paper-review/AutoML-Zero/008.png" /></p>
 
 두번째로는 training을 빨리 해야하는 상황이 주어졌을때 인데 Training dataset=800, epoch=10을 주고 진행을했다 그 결과 AutoML-Zero가 learning-rate decay를 알아서 구현했고 epoch를 10 과 100을 주고 재실험을 했는데 epoch=10일때는 모두 learning-rate decay를 스스로 구현했고 epoch=100일때는 드물게 구현이 됐다고 한다.
 
@@ -77,7 +77,7 @@ Training dataset = 80, epoch = 100으로 적은량의 데이터셋을 가지고 
 
 - ##### Multiple classes
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/009.png" /></p>
+<p align="center"><img width="30%" height="30%" src="../image/Paper-review/AutoML-Zero/009.png" /></p>
 
 마지막으로 이전까지는 두개의 class만 맞추는 경우였다면 multiple class를 적용시킨 결과이다. CIFAR-10의 10개의 클래스를 모두 학습했을때 위와 같이 알수 없는 연산이 발생했고 multi, binary 각각 30번씩 재실험을 한 결과 binary class에서는 한번도 나타나지 않았지만 multi class에서는 24번이 나타났다고 한다.
 
