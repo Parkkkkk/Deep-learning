@@ -12,7 +12,7 @@ AutoML-Zero는 google에서 발표한 논문으로 시작은 Empty algorithm으�
 
 지금까지 머신러닝이나 딥러닝에서 성능이 좋은 모델을 만들어내기 위해 모델의 구조, 최적화 방법, 학습 방법등 굉장히 많은 다양한 연구를 해왔고 크게 발전해왔다. 하지만 이러한 부분에서 사람이 직접관여하는 모델 설계나 파라미터를 설정하는데 시간을 쓰는 대신 컴퓨터 계산을 통해서 대신 model에 architecture나 hyperparameter를 찾아주는 AutoML이라는 분야가 있다. 원래는 사람이 다 설계를 해왔다면 어느정도는 컴퓨터가 최적화 시킬수 있다는것을 아래 그림과 같이 볼수 있고 지금까지 AutoML이 최적화한 큰 분야는 모델의 구조, hyperparameter, Learning rule등이 있습니다. 
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/001.png" /></p>
+<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/001.PNG" /></p>
 
 #### Constrained Search Space
 
@@ -50,7 +50,7 @@ AutoML중에서 architecture search에서는 지금 까지 사람이 제한을 �
 
 Step3에서 best algorithm을 찾는 과정이있는데 best algorithm을 찾는 방법은 아래와 같다.
 
-<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/004.png" /></p>
+<p align="center"><img width="50%" height="50%" src="../image/Paper-review/AutoML-Zero/004.PNG" /></p>
 
 Setpu함수는 initialization하는 부분으로 보면되고 여기서 train과 validation dataset이 추가로 evaluation 함수로 들어가게되고 그럼 train을 통해 모델을 학습시키고 그 모델의 Predict함수와 learn함수를 통해서 학습을 시키고 validation을 해서 최종적으로 각 알고리즘의 성능을 나타내게 된다. 좀 다른 부분은 저자는 결과값이 binary classification일 경우 0 or 1, multi classification일 경우 class의 개수만큼 정수로 반환하는 부분으로 따로 추가시켰다. 
 
